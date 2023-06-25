@@ -2,6 +2,8 @@
 
 **Note: The parameter pod-network-cidr changes as per the network option.**
 
+https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
 **Example:** The suggested CIDR for flannel and canal networks is 10.244.0.0/16 and for calico network it could be 192.168.0.0/16 , The default range that Weave Net would like to use is 10.32.0.0/12
 
 It is not necessary to provide the parameter –pod-network-cidr for other network options like Contiv, Romana and Weavenet. However, it is must for the networks Romana and Weavenet to set /proc/sys/net/bridge/bridge-nf-call-iptables to 1 by running "sysctl net.bridge.bridge-nf-call-iptables=1" to pass bridged IPv4 traffic to iptables’ chains.
